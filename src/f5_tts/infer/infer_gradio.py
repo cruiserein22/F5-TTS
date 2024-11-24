@@ -541,7 +541,7 @@ Have a conversation with an AI using your reference voice!
             if chat_model_state is None:
                 show_info = gr.Info
                 show_info("Loading chat model...")
-                model_name = "Qwen/Qwen2.5-3B-Instruct"
+                model_name = "huihui-ai/Qwen2.5-7B-Instruct-abliterated-v2"
                 chat_model_state = AutoModelForCausalLM.from_pretrained(
                     model_name, torch_dtype="auto", device_map="auto"
                 )
@@ -556,7 +556,7 @@ Have a conversation with an AI using your reference voice!
         chat_interface_container = gr.Column()
 
         if chat_model_state is None:
-            model_name = "Qwen/Qwen2.5-3B-Instruct"
+            model_name = "huihui-ai/Qwen2.5-7B-Instruct-abliterated-v2"
             chat_model_state = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype="auto", device_map="auto")
             chat_tokenizer_state = AutoTokenizer.from_pretrained(model_name)
 
